@@ -1,0 +1,13 @@
+parameters:
+	level: 5
+	paths:
+		- to-do-mvc.php
+		- src/render.php
+	scanFiles:
+		- vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+	# render.php runs inside the block render callback, which provides these.
+	treatPhpDocTypesAsCertain: false
+	ignoreErrors:
+		-
+			identifier: variable.undefined
+			path: src/render.php

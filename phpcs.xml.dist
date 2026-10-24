@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<ruleset name="To Do MVC">
+	<description>Coding standards for the To Do MVC plugin.</description>
+
+	<file>to-do-mvc.php</file>
+	<file>src</file>
+	<file>_blueprint</file>
+
+	<exclude-pattern>*/build/*</exclude-pattern>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+
+	<arg name="extensions" value="php"/>
+	<arg name="colors"/>
+	<arg value="ps"/>
+
+	<config name="minimum_wp_version" value="6.1"/>
+	<config name="testVersion" value="7.0-"/>
+
+	<rule ref="WordPress">
+		<!-- Hyphenated main file name is the WordPress convention here. -->
+		<exclude name="WordPress.Files.FileName"/>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="to-do-mvc"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="to_do_mvc"/>
+				<element value="TO_DO_MVC"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

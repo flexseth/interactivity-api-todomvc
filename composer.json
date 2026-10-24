@@ -1,0 +1,23 @@
+{
+    "require-dev": {
+        "php-stubs/wordpress-stubs": "^7.1",
+        "phpstan/phpstan": "^2.3",
+        "wp-coding-standards/wpcs": "^3.4",
+        "dealerdirect/phpcodesniffer-composer-installer": "^1.2",
+        "szepeviktor/phpstan-wordpress": "^2.0",
+        "phpstan/extension-installer": "^1.4"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "name": "flexseth/to-do-mvc",
+    "type": "wordpress-plugin",
+    "description": "A to-do block in the style of https://todomvc.com/",
+    "scripts": {
+        "phpcs": "phpcs",
+        "phpstan": "phpstan analyse --memory-limit=1G"
+    }
+}
