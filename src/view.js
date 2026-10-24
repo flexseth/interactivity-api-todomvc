@@ -25,7 +25,8 @@ let confirmedTodos = null;
 const { state, actions, helpers } = store( 'to-dos', {
 	state: {
 		editingToDo: 0,
-		toDos: [],
+		// `toDos` comes from the server (render.php). Don't give it a default here,
+		// or the client default replaces the server-rendered list.
 		get hasToDos() {
 			return state.toDos.length > 0;
 		},
